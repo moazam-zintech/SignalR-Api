@@ -10,8 +10,6 @@ namespace SignalR_Api.HubConfig
         {
             await Clients.All.SendAsync("Recieved Message", $"{Context.ConnectionId} has joined");
         }*/
-
-
         public async Task JoinChat(UserConnections conn)
         {
             await Clients.All.SendAsync("Recieved Message","admin", $"{conn.userName} has joined");
